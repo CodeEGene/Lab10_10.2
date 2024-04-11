@@ -175,5 +175,6 @@ int count_letters(string str) {
 				break;
 		}
 	}
+
 	return count;
 }
