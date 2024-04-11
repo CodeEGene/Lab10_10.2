@@ -3,10 +3,11 @@
 using namespace std; 
 
 int count_letters(string str);
+int count_words(string str);
 
 int main() {
 
-	cout << count_letters("oogooa2b");
+	cout << count_words("I don't give a Holstein.");
 
 	return 0;
 }
@@ -176,5 +177,15 @@ int count_letters(string str) {
 		}
 	}
 
+	return count;
+}
+int count_words(string str) {
+	int count = 0;
+	for (const auto& i : str) {
+		if (i == ' ') {
+			count++;
+		}
+	}
+	count++;
 	return count;
 }
